@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   images: { 
     unoptimized: true 
   },
-  basePath: "",
-  assetPrefix: "",
+  basePath: "/codestormhub.github.io",
+  assetPrefix: "/codestormhub.github.io",
   eslint: {
     ignoreDuringBuilds: true,
   },
