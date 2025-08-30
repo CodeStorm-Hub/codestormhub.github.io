@@ -13,6 +13,7 @@ Replacement (HMR) – continues to work smoothly.
   build command switches the `.next` folder to production assets which disables hot
   reload and can leave the development server in an inconsistent state.  If a
   production build is required, do it outside of the interactive agent workflow.
+* **Binary File Support Issue** in gitignore add the binary files for creating PR properly
 
 ## 2. Keep Dependencies in Sync
 
