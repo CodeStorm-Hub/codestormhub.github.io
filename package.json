@@ -33,7 +33,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/jest": "^29.5.12",
-    "@testing-library/react": "^14.1.2",
+    "@testing-library/react": "^16.0.1",
     "@testing-library/jest-dom": "^6.1.6",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
