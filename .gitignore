@@ -39,6 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# binary assets
-public/CodeStorm_Hub.png
-src/app/favicon.ico
+# images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
