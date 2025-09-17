@@ -82,7 +82,21 @@ export function ContactFormComponent({ onSubmit, className }: ContactFormCompone
 
     setIsSubmitting(true);
     try {
-      await onSubmit(formData);
+      // Try to use backend automation service first
+      try {
+        const { backendAutomation } = await import('@/lib/backend-automation');
+        const result = await backendAutomation.processContactForm(formData);
+        
+        if (result.success) {
+          console.log('Form processed via backend automation:', result.submissionId);
+        }
+      } catch (automationError) {
+        console.warn('Backend automation failed, using fallback:', automationError);
+        
+        // Fallback to provided onSubmit handler
+        await onSubmit(formData);
+      }
+
       setIsSubmitted(true);
       setFormData({
         name: "",

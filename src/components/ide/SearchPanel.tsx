@@ -53,7 +53,7 @@ export function SearchPanel({ files, onFileSelect, className }: SearchPanelProps
         const matches: SearchResult["matches"] = [];
         
         lines.forEach((line, lineIndex) => {
-          let searchPattern = searchTerm;
+          const searchPattern = searchTerm;
           let flags = "g";
           
           if (!caseSensitive) flags += "i";
