@@ -6,8 +6,11 @@ const nextConfig: NextConfig = {
   images: { 
     unoptimized: true 
   },
-  basePath: "/codestormhub.github.io",
-  assetPrefix: "/codestormhub.github.io",
+  // Only use basePath in production
+  ...(process.env.NODE_ENV === 'production' && {
+    basePath: "/codestormhub.github.io",
+    assetPrefix: "/codestormhub.github.io",
+  }),
   eslint: {
     ignoreDuringBuilds: true,
   },
